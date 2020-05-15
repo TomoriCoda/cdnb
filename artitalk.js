@@ -4,7 +4,7 @@
  *
  * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
  */
-var version = "v1.1.12";
+var version = "v1.1.12.5";
 ! function() { "use strict"; var root = "object" == typeof window ? window : {},
         NODE_JS = !root.JS_SHA1_NO_NODE_JS && "object" == typeof process && process.versions && process.versions.node;
     NODE_JS && (root = global); var COMMON_JS = !root.JS_SHA1_NO_COMMON_JS && "object" == typeof module && module.exports,
