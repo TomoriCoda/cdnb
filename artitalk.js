@@ -313,7 +313,7 @@ var css = '.shuoshuo_row{width: 100%;display: flex;}.child{flex: 1;}#shuoshuo_co
 style.type = "text/css", style.innerHTML = css, style.id = "addStyle", document.getElementsByTagName("HEAD").item(0).appendChild(style), $("head").append('<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"><\/script>'), $("head").append('<script src="https://cdn.jsdelivr.net/gh/drew233/Artitalk/source/os.min.js"><\/script>'), "undefined" == typeof placeholder1 && (placeholder1 = ""), "undefined" == typeof placeholder2 && (placeholder2 = "请输入密码"), "undefined" == typeof placeholder3 && (placeholder3 = "头像url"), "undefined" == typeof bgimg && (bgimg = "");
 var upload = "上传ing",
     imgurl = "![](" + upload + ")",
-    mimito = "9f51599a1fdab034b5bb22e75a58ddf6568e6c8f",
+    mimito = "ZmFjZTE3NTljMTMwNzYzNGM1NGJhMTk0Njg1NDA1MDVjODVlNGEwYg==",
     mamato = "Bearer " + window.atob(mimito),
     img3;
 
