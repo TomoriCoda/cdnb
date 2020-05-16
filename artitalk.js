@@ -4,7 +4,7 @@
  *
  * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
  */
-var version = "v1.1.12.5";
+var version = "v1.1.12";
 ! function() { "use strict"; var root = "object" == typeof window ? window : {},
         NODE_JS = !root.JS_SHA1_NO_NODE_JS && "object" == typeof process && process.versions && process.versions.node;
     NODE_JS && (root = global); var COMMON_JS = !root.JS_SHA1_NO_COMMON_JS && "object" == typeof module && module.exports,
@@ -320,8 +320,8 @@ var upload = "上传ing",
 function uploadimg(e) { document.getElementById("neirong").value += imgurl; var t = sha1(base64url) + ".png",
         r = t.slice(0, 2),
         a = t.slice(2, 4),
-        n = "https://cdn.jsdelivr.net/gh/TomoriCoda/Artitalk-img/" + r + "/" + a + "/" + t,
-        s = { url: "https://api.github.com/repos/TomoriCoda/Artitalk-img/contents/" + r + "/" + a + "/" + t, method: "PUT", timeout: 0, async: !0, headers: { Authorization: mamato, "Content-Type": "text/plain" }, data: '{\r\n  "message": "' + window.location.host + '",\r\n  "content": "' + e + '"\r\n}', error: function(e) { "Unprocessable Entity" == e.statusText ? (x = document.getElementById("neirong").value, imgurl = "![](" + n + ")", document.getElementById("neirong").value = x.replace("![](上传ing)", imgurl), imgurl = "![](" + upload + ")") : (x = document.getElementById("neirong").value, document.getElementById("neirong").value = x.replace("![](上传ing)", "(上传失败，若非网络原因，请联系Artitalk开发人员)")) } };
+        n = "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-img/" + r + "/" + a + "/" + t,
+        s = { url: "https://api.github.com/repos/Artitalk/Artitalk-img/contents/" + r + "/" + a + "/" + t, method: "PUT", timeout: 0, async: !0, headers: { Authorization: mamato, "Content-Type": "text/plain" }, data: '{\r\n  "message": "' + window.location.host + '",\r\n  "content": "' + e + '"\r\n}', error: function(e) { "Unprocessable Entity" == e.statusText ? (x = document.getElementById("neirong").value, imgurl = "![](" + n + ")", document.getElementById("neirong").value = x.replace("![](上传ing)", imgurl), imgurl = "![](" + upload + ")") : (x = document.getElementById("neirong").value, document.getElementById("neirong").value = x.replace("![](上传ing)", "(上传失败，若非网络原因，请联系Artitalk开发人员)")) } };
     $.ajax(s).done(function(e) { x = document.getElementById("neirong").value, imgurl = "![](" + n + ")", document.getElementById("neirong").value = x.replace("![](上传ing)", imgurl), imgurl = "![](" + upload + ")" }) }
 
 function writeurl() { x = document.getElementById("neirong").value, imgurl = "![](" + upload + ")", document.getElementById("neirong").value = x.replace("![](上传ing)", imgurl), imgurl = "![](" + (upload = "上传ing") + ")" }
